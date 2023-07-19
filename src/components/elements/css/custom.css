@@ -1,0 +1,75 @@
+.collection-sorting-container > ul {
+  display: none;
+}
+.collection-sorting-container.show > ul {
+  display: block;
+}
+.collection-sorting-container > p {
+  display: flex;
+  gap: 32px;
+  margin: auto;
+}
+.collection-filter-sorting-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.collection-filter-container > .nested-availability-filter {
+  display: none;
+}
+.collection-filter-container.show > .nested-availability-filter {
+  display: block;
+}
+.collection-filter-container > p {
+  display: flex;
+  gap: 32px;
+  margin: auto;
+}
+.collection-filter-container.show
+  > .nested-availability-filter
+  > .nested-list
+  > ul {
+  display: none;
+}
+.collection-filter-container.show
+  > .nested-availability-filter
+  > .nested-list.show
+  > ul {
+  display: block;
+  margin-left: 32px;
+}
+div.nested-list.solo > li {
+  display: none;
+}
+div.nested-list.solo.show > li {
+  display: block;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.ul-inline {
+  display: inline;
+}
+.li-cap {
+  text-transform: capitalize;
+}
+.collection-price-container > .price-range-container > input,
+.collection-price-container > .price-range-container > label {
+  display: block;
+}
+.collection-price-container > .price-range-container {
+  display: none;
+  margin-left: 32px;
+}
+.collection-price-container.show > .price-range-container {
+  display: block;
+}
+.collection-price-container > .price-range-container > button {
+  border: 1px solid black;
+  padding: 4px 10px;
+  margin-top: 24px;
+}
+.collection-price-container > .price-range-container > button:hover {
+  background-color: black;
+  color: white;
+}
