@@ -83,7 +83,12 @@ export function CollectionFilter({ minPrice, maxPrice, filterObj }) {
       return (
         <ul className="ul-inline">
           <div className="nested-list solo">
-            <p className="li-cap">{key}</p>
+            <p className="li-cap">
+              <span>{key}</span>
+              <span className="svg-sp">
+                <FaArrowDown />
+              </span>
+            </p>
             {value.map((value) => (
               <li
                 data-filter-value={value}
@@ -102,24 +107,20 @@ export function CollectionFilter({ minPrice, maxPrice, filterObj }) {
     <Section>
       <div className="collection-filter-sorting-container">
         <div className="flex-row" onClick={OnClickFilter}>
-          <p className="filter-title">
-            Filter <FaArrowDown />
-          </p>
+          <p className="filter-title">Filter:</p>
           <div className="nested-availability-filter flex-row">
-            <div
-              className="nested-list flex-row"
-              data-filter-key="STOCK"
-              onClick={onFilterParam}
-            >
-              <List data={filterObj}>asdsd</List>
-            </div>
             <div
               className="collection-price-container"
               onClick={onFilterPriceParam}
             >
-              <div className="filter-price">Price</div>
+              <div className="filter-price">
+                Price{' '}
+                <span className="svg-sp">
+                  <FaArrowDown />
+                </span>
+              </div>
               <div className="price-range-container">
-                <label htmlFor="mininputrange">Min (between 0 and 2000):</label>
+                <label htmlFor="mininputrange">Min (0 to 2000):</label>
                 <input
                   type="range"
                   id="mininputrange"
@@ -131,14 +132,12 @@ export function CollectionFilter({ minPrice, maxPrice, filterObj }) {
                   onChange={onChangeMin}
                 />
                 <p>{minPriceRange}</p>
-                <label htmlFor="mininputrange">
-                  Max (between 0 and 10000):
-                </label>
+                <label htmlFor="mininputrange">Max (2000 to 10000):</label>
                 <input
                   type="range"
                   id="maxinputrange"
                   name="maxinputrange"
-                  min="0"
+                  min="2000"
                   value={maxPriceRange}
                   max="10000"
                   step={1}
@@ -149,6 +148,13 @@ export function CollectionFilter({ minPrice, maxPrice, filterObj }) {
                   Apply
                 </button>
               </div>
+            </div>
+            <div
+              className="nested-list flex-row"
+              data-filter-key="STOCK"
+              onClick={onFilterParam}
+            >
+              <List data={filterObj}>asdsd</List>
             </div>
           </div>
         </div>

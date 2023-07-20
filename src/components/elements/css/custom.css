@@ -12,6 +12,16 @@
 .collection-filter-sorting-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-radius: 5px;
+  border: 2px solid lightgrey;
+  padding: 17px 10px;
+  background: white;
+}
+.filter-price,
+.li-cap {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
 }
 .collection-filter-container > .nested-availability-filter {
   display: none;
@@ -50,8 +60,26 @@ div.nested-list.solo.show > li {
 .ul-inline {
   display: inline;
 }
+.ul-inline,
+.collection-price-container {
+  height: 28px;
+  text-align: center;
+  margin: 0 10px;
+  width: 80px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.svg-sp svg {
+  display: unset;
+}
+.svg-sp {
+  margin-left: 10px;
+}
 .li-cap {
   text-transform: capitalize;
+}
+.filter-title {
+  font-weight: 700;
 }
 .collection-price-container > .price-range-container > input,
 .collection-price-container > .price-range-container > label {
@@ -59,7 +87,18 @@ div.nested-list.solo.show > li {
 }
 .collection-price-container > .price-range-container {
   display: none;
-  margin-left: 32px;
+}
+.price-range-container {
+  position: absolute;
+  width: 200px;
+  background-color: white;
+  margin-top: 10px;
+  z-index: 1;
+}
+.card-image {
+  z-index: 0;
+}
+.nested-list > li {
 }
 .collection-price-container.show > .price-range-container {
   display: block;
